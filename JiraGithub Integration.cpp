@@ -12,7 +12,7 @@ int main(){
 
     selectionSort(a);
 
-    std::cout << "\nSorted array is:\n";
+    std::cout << "\nSorted array is :\n";
     for(int i = 0; i < 10; i++){
         std::cout << a[i] << "\t";
     }
@@ -32,7 +32,6 @@ void selectionSort(int a[]){
                 loc = j;
             }
         }
-        //temp = min;
         a[loc] = a[i];
         a[i] = min;
     }
