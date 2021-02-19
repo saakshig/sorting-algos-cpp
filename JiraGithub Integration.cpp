@@ -12,7 +12,7 @@ int main(){
 
     selectionSort(a);
 
-    std::cout << "\nSorted array\n";
+    std::cout << "\nSorted array is:\n";
     for(int i = 0; i < 10; i++){
         std::cout << a[i] << "\t";
     }
