@@ -6,6 +6,7 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+//Using Floyd's Tortoise and Hare alogorith
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
