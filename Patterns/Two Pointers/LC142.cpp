@@ -9,7 +9,7 @@
 class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
-        ListNode *fast = head, *slow = head;
+        /*ListNode *fast = head, *slow = head;
         int cycleLength = 0;
         while(fast != NULL && fast->next != NULL) {
             fast = fast->next->next;
@@ -39,6 +39,18 @@ public:
             slow = slow->next;
         }
 
-        return slow;
+        return slow;*/
+
+        //Using set
+        set<ListNode*> visitedNodeSet;
+        ListNode *node = head;
+        while(node != NULL) {
+            if(visitedNodeSet.find(node) != visitedNodeSet.end()) {
+                return node;
+            }
+            visitedNodeSet.insert(node);
+            node = node->next;
+        }
+        return NULL;
     }
 };
